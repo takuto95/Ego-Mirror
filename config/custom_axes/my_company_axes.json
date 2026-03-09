@@ -1,0 +1,19 @@
+{
+    "company_value": {
+        "desc": "会社の行動指針への合致度",
+        "points": 20,
+        "criteria": [
+            "自律的な改善案の提示 (ownership)",
+            "ドキュメントによる知識共有 (speed & transparency)",
+            "新技術への挑戦 (growth mindset)"
+        ]
+    },
+    "personal_goal_2026": {
+        "desc": "2026年の個人目標：AIエージェントの完全自律化インフラの構築",
+        "points": 10,
+        "criteria": [
+            "ALE（Auto-Loop Engine）の安定稼働",
+            "マルチエージェント・オーケストレーションの実現"
+        ]
+    }
+}
