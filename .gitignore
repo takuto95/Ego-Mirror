@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+
+# SQLite Databases
+*.vscdb
+*.db
+*.sqlite
+
+# Ego-Mirror Temporary Files
+tmp_*/
+tmp_*
+
+# Logs
+logs/evaluation/activity_*.json
+logs/ide_analysis_report.json

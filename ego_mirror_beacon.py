@@ -68,5 +68,25 @@ def collect_activity():
     print(f"✅ Activity logged to {OUTPUT_DIR / filename}")
     return activity
 
-if __name__ == "__main__":
+def main():
+    # 1. Activities collection (JSON)
     collect_activity()
+    
+    # 2. PoV Report Generation (Markdown + IDE Analysis)
+    try:
+        # Import dynamically to avoid path issues
+        sys.path.append(str(Path(__file__).parent / "src"))
+        from generate_pov_report import generate_pov
+        generate_pov()
+    except Exception as e:
+        print(f"⚠️ PoV Generation failed: {e}")
+
+    # 3. Sync to Canon Central
+    try:
+        from sync_to_canon import sync_pows
+        sync_pows()
+    except Exception as e:
+        print(f"⚠️ Sync failed: {e}")
+
+if __name__ == "__main__":
+    main()
